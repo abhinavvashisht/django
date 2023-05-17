@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block pagetitle %}Home{% endblock pagetitle %}
+{% block home %}
+<section>
+    <div class="container p-1">
+        <div class="row g-1">
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        SLIDER (Dynamic Content)
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">Announcements</div>
+                    <div class="card-body">
+                        {% for a in announcements %}
+                        <i class="bi bi-volume-up-fill"></i><a href="">{{a.title}}</a> <br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 class="text-center display-1 fw-bold">Welcome to SLIET</h1>
+</section>
+{% endblock home %}
